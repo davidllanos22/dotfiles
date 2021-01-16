@@ -1,9 +1,29 @@
+" coc settings
 
-colorscheme dracula
-
-autocmd vimenter * NERDTree
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:coc_global_extensions = [ 'coc-tsserver' ]
+
+" NERDTree settings
+
+autocmd vimenter * NERDTree
+
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeIgnore = []
+let g:NERDTreeStatusline = ''
+
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+nnoremap <silent> <C-b> :NERDTreeToggle<CR>
+
+" Theme settings
+
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
+"colorscheme dracula
 
 syntax enable                           " Enables syntax highlighing
 set rnu                                 " Show relative numbers
@@ -39,8 +59,6 @@ set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 "set autochdir                           " Your working directory will always be the same as your working directory
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
