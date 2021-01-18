@@ -1,3 +1,4 @@
 coc/
 nvim/plugged/
 nvim/autoload/plug.vim
+configstore/
