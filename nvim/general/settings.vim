@@ -7,6 +7,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 autocmd vimenter * NERDTree
 
+let NERDTreeShowBookmarks=1
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
@@ -60,7 +61,11 @@ set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 "set autochdir                           " Your working directory will always be the same as your working directory
 set nohlsearch                          " Disable search highlighting
-                                        
+
+" Open vim setting file with command config
+command Config :e C:\dotfiles\nvim\general\settings.vim 
+
+
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 " You can't stop me
