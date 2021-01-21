@@ -1,6 +1,8 @@
+let $TMP="/tmp"
+
 " coc settings
 
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " let g:coc_global_extensions = [ 'coc-tsserver' ]
 
 " NERDTree settings
@@ -61,16 +63,15 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set nohlsearch                          " Disable search highlighting
 
 
-nnoremap <C-t> :tabnew<CR>                    " Open new tab with Ctrl+t
-nnoremap <Tab> :bnext<CR>                     " Switch to next buffer with Tab
-nnoremap <S-Tab> :bprevious<CR>               " Switch to previous buffer with Shift+Tab
-nnoremap <silent> <C-b> :NERDTreeToggle<CR>   " Toggle NERDTreee with Ctrl+b
+nnoremap <C-t> :tabnew<CR> 
+nnoremap <Tab> :bnext<CR> 
+nnoremap <S-Tab> :bprevious<CR> 
+nnoremap <silent> <C-b> :NERDTreeToggle<CR>
+nnoremap <C-p> :GFiles<CR>
+nnoremap <C-o> :Buffers<CR>
+nnoremap <C-f> :Rg! 
 
-" Open vim setting file with command config
-command Config :e C:\dotfiles\nvim\general\settings.vim 
-
-
-au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+" au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 " You can't stop me
 cmap w!! w !sudo tee %
