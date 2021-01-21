@@ -62,6 +62,10 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 "set autochdir                           " Your working directory will always be the same as your working directory
 set nohlsearch                          " Disable search highlighting
 
+
+nnoremap <C-t> :tabnew<CR>         " Open new tab with Ctrl+T
+nnoremap <Tab> :bnext<CR>          " Switch to next buffer with Tab
+nnoremap <S-Tab> :bprevious<CR>    " Switch to previous buffer with Shift+Tab
 " Open vim setting file with command config
 command Config :e C:\dotfiles\nvim\general\settings.vim 
 
