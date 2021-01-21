@@ -16,8 +16,6 @@ let g:NERDTreeStatusline = ''
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
-nnoremap <silent> <C-b> :NERDTreeToggle<CR>
-
 " Theme settings
 
 let g:tokyonight_style = 'night' " available: night, storm
@@ -63,9 +61,11 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set nohlsearch                          " Disable search highlighting
 
 
-nnoremap <C-t> :tabnew<CR>         " Open new tab with Ctrl+T
-nnoremap <Tab> :bnext<CR>          " Switch to next buffer with Tab
-nnoremap <S-Tab> :bprevious<CR>    " Switch to previous buffer with Shift+Tab
+nnoremap <C-t> :tabnew<CR>                    " Open new tab with Ctrl+t
+nnoremap <Tab> :bnext<CR>                     " Switch to next buffer with Tab
+nnoremap <S-Tab> :bprevious<CR>               " Switch to previous buffer with Shift+Tab
+nnoremap <silent> <C-b> :NERDTreeToggle<CR>   " Toggle NERDTreee with Ctrl+b
+
 " Open vim setting file with command config
 command Config :e C:\dotfiles\nvim\general\settings.vim 
 
