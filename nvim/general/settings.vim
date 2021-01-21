@@ -23,8 +23,9 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 let g:tokyonight_style = 'night' " available: night, storm
 let g:tokyonight_enable_italic = 1
 
-colorscheme tokyonight
+"colorscheme tokyonight
 "colorscheme dracula
+colorscheme gruvbox
 
 syntax enable                           " Enables syntax highlighing
 set rnu                                 " Show relative numbers

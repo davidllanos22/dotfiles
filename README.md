@@ -8,6 +8,7 @@ Nvim configuration files
 - Download plug.vim and put it in the nvim\autoload directory
 - Download fzf binary and add it to PATH
 - Download ripgrep and add it to PATH
+- Add C:\Program Files\Git\bin to PATH
 
 ## Notes
 
