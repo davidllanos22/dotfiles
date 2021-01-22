@@ -20,4 +20,4 @@ Plug 'morhetz/gruvbox'
 call plug#end()
 
 source C:\dotfiles\nvim\general\settings.vim
-source C:\dotfiles\nvim\coc.vim
+"source C:\dotfiles\nvim\coc.vim
