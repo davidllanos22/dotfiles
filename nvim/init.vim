@@ -10,13 +10,12 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
 " Themes
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
-
+Plug 'ntk148v/vim-horizon'
 call plug#end()
 
 source C:\dotfiles\nvim\general\settings.vim

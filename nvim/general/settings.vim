@@ -1,12 +1,9 @@
 let $TMP="/tmp"
 
 " coc settings
-
-" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " let g:coc_global_extensions = [ 'coc-tsserver' ]
 
 " NERDTree settings
-
 autocmd vimenter * NERDTree
 
 let NERDTreeShowBookmarks=1
@@ -23,9 +20,9 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 let g:tokyonight_style = 'night' " available: night, storm
 let g:tokyonight_enable_italic = 1
 
-"colorscheme tokyonight
+colorscheme tokyonight
 "colorscheme dracula
-colorscheme gruvbox
+"colorscheme gruvbox
 
 syntax enable                           " Enables syntax highlighing
 set rnu                                 " Show relative numbers
@@ -63,7 +60,6 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 "set autochdir                           " Your working directory will always be the same as your working directory
 set nohlsearch                          " Disable search highlighting
 
-
 nnoremap <C-t> :tabnew<CR> 
 nnoremap <Tab> :bnext<CR> 
 nnoremap <S-Tab> :bprevious<CR> 
@@ -71,6 +67,7 @@ nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-o> :Buffers<CR>
 nnoremap <C-f> :Rg! 
+nnoremap <C-Enter> :call GuiWindowFullScreen(!g:GuiWindowFullScreen)<CR>
 
 " au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
