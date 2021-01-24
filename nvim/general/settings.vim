@@ -68,7 +68,7 @@ nnoremap <C-p> :GFiles<CR>
 nnoremap <C-o> :Buffers<CR>
 nnoremap <C-f> :Rg! 
 nnoremap <C-Enter> :call GuiWindowFullScreen(!g:GuiWindowFullScreen)<CR>
-
+nnoremap <F5> :!make<CR> 
 " au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 " You can't stop me
