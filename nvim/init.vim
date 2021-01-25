@@ -1,7 +1,6 @@
 call plug#begin('C:\dotfiles\nvim\plugged')
 
 Plug 'preservim/nerdtree'
-" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
@@ -11,6 +10,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'vim-pandoc/vim-pandoc'
 " Themes
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }

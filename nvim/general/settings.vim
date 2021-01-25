@@ -15,6 +15,22 @@ let g:NERDTreeStatusline = ''
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
+" Goyo and limelight settings
+
+function CustomGoyoEnter()
+  Limelight
+  "set laststatus=2
+  "AirlineToggle 
+  "set statusline="test words"
+endfunction
+
+function CustomGoyoLeave()
+  Limelight!
+endfunction
+
+autocmd! User GoyoEnter call CustomGoyoEnter()
+autocmd! User GoyoLeave call CustomGoyoLeave()
+
 " Theme settings
 
 let g:tokyonight_style = 'night' " available: night, storm
@@ -57,8 +73,9 @@ set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
-"set autochdir                           " Your working directory will always be the same as your working directory
 set nohlsearch                          " Disable search highlighting
+set colorcolumn=80
+set laststatus=2
 
 nnoremap <C-t> :tabnew<CR> 
 nnoremap <Tab> :bnext<CR> 
@@ -71,5 +88,29 @@ nnoremap <C-Enter> :call GuiWindowFullScreen(!g:GuiWindowFullScreen)<CR>
 nnoremap <F5> :!make<CR> 
 " au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
+let g:word_count="<unknown>"
+function WordCount()
+	return g:word_count
+endfunction
+
+function UpdateWordCount()
+	let lnum = 1
+	let n = 0
+	while lnum <= line('$')
+		let n = n + len(split(getline(lnum)))
+		let lnum = lnum + 1
+	endwhile
+	let g:word_count = n
+endfunction
+
+" Update the count when cursor is idle in command or insert mode.
+" Update when idle for 1000 msec (default is 4000 msec).
+
+set updatetime=1000
+augroup WordCounter
+	au! CursorHold,CursorHoldI * call UpdateWordCount()
+augroup END
+
+"set statusline+=\ %{WordCount()}\ words
 " You can't stop me
 cmap w!! w !sudo tee %
