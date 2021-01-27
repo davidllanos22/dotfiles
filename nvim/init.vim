@@ -11,7 +11,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'vim-pandoc/vim-pandoc'
+Plug 'voldikss/vim-floaterm'
 " Themes
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }

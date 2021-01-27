@@ -85,7 +85,9 @@ nnoremap <C-p> :GFiles<CR>
 nnoremap <C-o> :Buffers<CR>
 nnoremap <C-f> :Rg! 
 nnoremap <C-Enter> :call GuiWindowFullScreen(!g:GuiWindowFullScreen)<CR>
-nnoremap <F5> :!make<CR> 
+nnoremap <F5> :!make<CR>
+let g:floaterm_keymap_toggle = '<F12>'
+
 " au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 let g:word_count="<unknown>"
@@ -114,3 +116,4 @@ augroup END
 "set statusline+=\ %{WordCount()}\ words
 " You can't stop me
 cmap w!! w !sudo tee %
+cd C:\dev\
