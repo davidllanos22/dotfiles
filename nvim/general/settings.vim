@@ -87,6 +87,7 @@ nnoremap <C-f> :Rg!
 nnoremap <C-Enter> :call GuiWindowFullScreen(!g:GuiWindowFullScreen)<CR>
 nnoremap <F5> :!make<CR>
 let g:floaterm_keymap_toggle = '<F12>'
+let g:floaterm_keymap_next   = '<F11>'
 
 " au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
