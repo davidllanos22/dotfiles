@@ -12,12 +12,16 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'voldikss/vim-floaterm'
+"Plug 'nvim-treesitter/nvim-treesitter' 
+
 " Themes
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
 Plug 'ntk148v/vim-horizon'
+Plug 'sainnhe/sonokai'
+
 call plug#end()
 
 source C:\dotfiles\nvim\general\settings.vim
