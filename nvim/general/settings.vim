@@ -6,11 +6,11 @@ let $TMP="/tmp"
 " NERDTree settings
 autocmd vimenter * NERDTree
 
-let NERDTreeShowBookmarks=1
+let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
-let g:NERDTreeStatusline = ''
+let g:NERDTreeStatusline = ' '
 
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
@@ -20,7 +20,6 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 function CustomGoyoEnter()
   Limelight
   "set laststatus=2
-  "AirlineToggle 
   "set statusline="test words"
 endfunction
 
@@ -32,13 +31,10 @@ autocmd! User GoyoEnter call CustomGoyoEnter()
 autocmd! User GoyoLeave call CustomGoyoLeave()
 
 " Theme settings
-
 let g:tokyonight_style = 'night' " available: night, storm
 let g:tokyonight_enable_italic = 1
 
 colorscheme tokyonight
-"colorscheme dracula
-"colorscheme gruvbox
 
 syntax enable                           " Enables syntax highlighing
 set rnu                                 " Show relative numbers
@@ -89,31 +85,5 @@ nnoremap <F5> :!make<CR>
 let g:floaterm_keymap_toggle = '<F12>'
 let g:floaterm_keymap_next   = '<F11>'
 
-" au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
-
-let g:word_count="<unknown>"
-function WordCount()
-	return g:word_count
-endfunction
-
-function UpdateWordCount()
-	let lnum = 1
-	let n = 0
-	while lnum <= line('$')
-		let n = n + len(split(getline(lnum)))
-		let lnum = lnum + 1
-	endwhile
-	let g:word_count = n
-endfunction
-
-" Update the count when cursor is idle in command or insert mode.
-" Update when idle for 1000 msec (default is 4000 msec).
-
-set updatetime=1000
-augroup WordCounter
-	au! CursorHold,CursorHoldI * call UpdateWordCount()
-augroup END
-
-"set statusline+=\ %{WordCount()}\ words
 " You can't stop me
 cmap w!! w !sudo tee %

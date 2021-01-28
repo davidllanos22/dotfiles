@@ -7,12 +7,9 @@ Plug 'junegunn/gv.vim'
 Plug 'mhinz/vim-signify'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'voldikss/vim-floaterm'
-"Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'Yggdroot/indentLine' 
 
 " Themes
@@ -26,4 +23,5 @@ Plug 'sainnhe/sonokai'
 call plug#end()
 
 source C:\dotfiles\nvim\general\settings.vim
-"source C:\dotfiles\nvim\coc.vim
+source C:\dotfiles\nvim\general\statusline.vim
+
