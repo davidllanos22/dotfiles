@@ -12,7 +12,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'voldikss/vim-floaterm'
-"Plug 'nvim-treesitter/nvim-treesitter' 
+"Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'Yggdroot/indentLine' 
 
 " Themes
 Plug 'ghifarit53/tokyonight-vim'

@@ -117,4 +117,3 @@ augroup END
 "set statusline+=\ %{WordCount()}\ words
 " You can't stop me
 cmap w!! w !sudo tee %
-cd C:\dev\
