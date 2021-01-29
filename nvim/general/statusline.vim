@@ -44,7 +44,7 @@ set statusline+=%#StatusLine#
 set statusline+=\ %n
 set statusline+=\  
 set statusline+=%#DiffChange#
-set statusline+=\ %f
+set statusline+=\ %t
 
 set statusline+=%=
 
