@@ -25,7 +25,7 @@ let g:currentmode={
 function! GetBranch()
   let branch = fugitive#head()
   if branch != ''
-    return branch
+    return "\ue725 " . branch
   else
     return "-"
 endfunction

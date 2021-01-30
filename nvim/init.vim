@@ -10,7 +10,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'voldikss/vim-floaterm'
-Plug 'Yggdroot/indentLine' 
+Plug 'Yggdroot/indentLine'
 
 " Themes
 Plug 'ghifarit53/tokyonight-vim'
