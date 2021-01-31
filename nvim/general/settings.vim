@@ -15,8 +15,11 @@ let g:NERDTreeStatusline = ' '
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
-" Goyo and limelight settings
+" NERDCommenter settings
+let g:NERDCreateDefaultMappings = 1
 
+
+" Goyo and limelight settings
 function CustomGoyoEnter()
   Limelight
   "set laststatus=2
@@ -36,6 +39,10 @@ let g:tokyonight_enable_italic = 1
 
 colorscheme tokyonight
 
+let mapleader=" "
+nnoremap <SPACE> <Nop>
+set timeout timeoutlen=1500
+filetype plugin on
 syntax enable                           " Enables syntax highlighing
 set rnu                                 " Show relative numbers
 set hidden                              " Required to keep multiple buffers open multiple buffers

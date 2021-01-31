@@ -1,7 +1,6 @@
 call plug#begin('C:\dotfiles\nvim\plugged')
 
 Plug 'preservim/nerdtree'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'mhinz/vim-signify'
@@ -11,6 +10,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'Yggdroot/indentLine'
+Plug 'preservim/nerdcommenter'
 
 " Themes
 Plug 'ghifarit53/tokyonight-vim'
