@@ -22,6 +22,6 @@ Plug 'sainnhe/sonokai'
 
 call plug#end()
 
-source C:\dotfiles\nvim\general\settings.vim
-source C:\dotfiles\nvim\general\statusline.vim
+source C:\dotfiles\nvim\general.vim
+source C:\dotfiles\nvim\statusline.vim
 
