@@ -35,20 +35,36 @@ function! GetMode()
   return m
 endfunction
 
+function! GetArrowRight()
+  return "\uE0B0"
+endfunction
+
+function! GetArrowLeft()
+  return "\uE0B2"
+endfunction
+
 set statusline=
 set statusline+=%#StatusLine#
 set statusline+=\ %{toupper(g:currentmode[mode()])}
+set statusline+=%#Directory#
+set statusline+=%{GetArrowLeft()} 
 set statusline+=%#PmenuSel#
 set statusline+=\ %{GetBranch()}\  
+set statusline+=%#Directory#
+set statusline+=%{GetArrowRight()}  
 set statusline+=%#StatusLine#
-set statusline+=\ %n
+"set statusline+=\ %n
 set statusline+=\  
+set statusline+=%#QuickFixLine#
+set statusline+=%{GetArrowLeft()} 
 set statusline+=%#DiffChange#
 set statusline+=\ %t
-
 set statusline+=%=
 
+set statusline+=%#QuickFixLine#
+set statusline+=%{GetArrowRight()}  
 set statusline+=%#StatusLine#
-set statusline+=\ %y%R%W%m
-set statusline+=\ %l/%L
+set statusline+=\ %R%W%m
+set statusline+=\ %p
+
 set statusline+=\ 
