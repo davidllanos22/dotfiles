@@ -89,6 +89,8 @@ nnoremap <C-o> :Buffers<CR>
 nnoremap <C-f> :Rg! 
 nnoremap <C-Enter> :call GuiWindowFullScreen(!g:GuiWindowFullScreen)<CR>
 nnoremap <F5> :!make<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
+
 let g:floaterm_keymap_toggle = '<F12>'
 let g:floaterm_keymap_next   = '<F11>'
 
