@@ -4,7 +4,19 @@ let $TMP="/tmp"
 " let g:coc_global_extensions = [ 'coc-tsserver' ]
 
 " NERDTree settings
+
+function CustomBufEnter()
+  "Shows current buffer in NERDTree window if the file is modifiable,
+  "the buffer is not diffview and NERDTree is active
+  let NERDTreeOpened = exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+  if &modifiable && NERDTreeOpened && strlen(expand('%')) > 0 && !&diff
+    NERDTreeFind
+    wincmd p
+  endif
+endfunction
+
 autocmd vimenter * NERDTree
+autocmd Bufenter * call CustomBufEnter()
 
 let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeShowHidden = 1
