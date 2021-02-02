@@ -42,6 +42,7 @@ let g:currentmode={
   \ 't'  : 'Terminal '
 \}
 
+let PIZZA="\uE22D"
 let LEFT_ARROW="\uE0B2"
 let RIGHT_ARROW="\uE0B0"
 let LEFT_LINE_ARROW="\uE0B3"
@@ -59,6 +60,7 @@ endfunction
 
 set statusline=
 set statusline+=%1*
+set statusline+=\ %{PIZZA} 
 set statusline+=\ %{toupper(g:currentmode[mode()])}
   
 set statusline+=%2*
