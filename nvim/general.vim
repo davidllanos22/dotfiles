@@ -16,7 +16,7 @@ function CustomBufEnter()
 endfunction
 
 autocmd vimenter * NERDTree
-autocmd Bufenter * call CustomBufEnter()
+"autocmd Bufenter * call CustomBufEnter()
 
 let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeShowHidden = 1
@@ -51,9 +51,6 @@ let g:tokyonight_enable_italic = 1
 
 colorscheme tokyonight
 
-let mapleader=" "
-nnoremap <SPACE> <Nop>
-set timeout timeoutlen=1500
 filetype plugin on
 syntax enable                           " Enables syntax highlighing
 set rnu                                 " Show relative numbers
@@ -91,6 +88,22 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set nohlsearch                          " Disable search highlighting
 set colorcolumn=80
 set laststatus=2
+
+" Disable Arrow keys in Normal mode
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+" Disable Arrow keys in Insert mode
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
+let mapleader=" "
+nnoremap <SPACE> <Nop>
+set timeout timeoutlen=1500
 
 nnoremap <C-t> :tabnew<CR> 
 nnoremap <Tab> :bnext<CR> 
