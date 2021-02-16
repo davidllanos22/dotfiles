@@ -1,4 +1,4 @@
-call plug#begin('C:\dotfiles\nvim\plugged')
+call plug#begin('/mnt/c/dotfiles/nvim/plugged')
 
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
@@ -22,6 +22,6 @@ Plug 'sainnhe/sonokai'
 
 call plug#end()
 
-source C:\dotfiles\nvim\general.vim
-source C:\dotfiles\nvim\statusline.vim
+source /mnt/c/dotfiles/nvim/general.vim
+source /mnt/c/dotfiles/nvim/statusline.vim
 
