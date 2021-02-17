@@ -46,13 +46,18 @@ autocmd! User GoyoEnter call CustomGoyoEnter()
 autocmd! User GoyoLeave call CustomGoyoLeave()
 
 " Theme settings
-let g:tokyonight_style = 'night' " available: night, storm
-let g:tokyonight_enable_italic = 1
+"let g:tokyonight_style = 'night' " available: night, storm
+"let g:tokyonight_enable_italic = 1
+"colorscheme tokyonight
 
-colorscheme tokyonight
+let g:dracula_colorterm = 0
+let g:dracula_italic = 0
+colorscheme dracula
 
-filetype plugin on
 syntax enable                           " Enables syntax highlighing
+set t_Co=256                            " Support 256 colors
+"set termguicolors
+filetype plugin on
 set rnu                                 " Show relative numbers
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
@@ -65,7 +70,6 @@ set iskeyword+=-                      	" treat dash separated words as a word te
 set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
-set t_Co=256                            " Support 256 colors
 set conceallevel=0                      " So that I can see `` in markdown files
 set tabstop=2                           " Insert 2 spaces for a tab
 set shiftwidth=2                        " Change the number of space characters inserted for indentation
