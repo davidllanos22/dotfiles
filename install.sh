@@ -13,5 +13,4 @@ ln -sf $dotfiles/.bashrc ~/.bashrc
 ln -sf $dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf $dotfiles/.aliases ~/.aliases
 
-
 echo "Dotfiles installed."
